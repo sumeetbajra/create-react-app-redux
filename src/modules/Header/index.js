@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import './style.css';
 
-import { logout } from '../../actions/userActions';
-
-class Header extends Component {
+export default class Header extends Component {
 	render() {
 		return (
 			<nav className="navbar navbar-inverse" id="myNav">
@@ -23,18 +19,10 @@ class Header extends Component {
 					</div>
 
 					<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						
-						{this.props.username ? 
-							<ul className="nav navbar-nav navbar-right">
-								<li><a href="#">Welcome {this.props.username}</a></li>
-								<li><a href="#" onClick={this.props.logout}>Logout</a></li>
-							</ul>							
-						 	: 
-							<ul className="nav navbar-nav navbar-right">
-								<li><Link to={'/login'}>Login</Link></li>
-								<li><Link to={'/register'}>Register</Link></li>
-							</ul>
-						}
+						<ul className="nav navbar-nav navbar-right">
+							<li><Link to={'/login'}>Login</Link></li>
+							<li><Link to={'/register'}>Register</Link></li>
+						</ul>
 					</div>
 				</div>
 			</nav>
@@ -42,16 +30,3 @@ class Header extends Component {
 	}
 }
 
-const mapStateToProps = (store) => {
-	return {
-		username: store.user.username
-	}
-}
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-		logout: bindActionCreators(logout, dispatch)
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
