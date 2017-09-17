@@ -1,16 +1,23 @@
 const initialState = {
 	loggedIn: false,
-	message: ''
+	loginError: ''
 }
 
 export function userReducer(state=initialState, action) {
 	switch (action.type) {
 
-		case 'LOGIN_USER':
+		case 'LOGIN_USER_SUCCESS':
 			return {
 				...state,
-				loggedIn: action.loggedIn,
-				message: action.loggedIn ? '' : 'Invalid username or password'
+				loggedIn: true,
+				loginError: ''
+			}
+		
+		case 'LOGIN_USER_FAIL':
+			return {
+				...state,
+				loggedIn: false,
+				loginError: action.error
 			}
 
 		case 'LOGOUT_USER':
