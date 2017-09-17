@@ -1,8 +1,14 @@
 export function loginUser(data) {
-  var loggedIn = data.username === 'admin' && data.password === 'password'
-  return {
-    type: 'LOGIN_USER',
-    loggedIn
+  if (data.username === 'admin' && data.password === 'password') {
+    return {
+      type: 'LOGIN_USER_SUCCESS',
+      user: data
+    }
+  } else {
+    return {
+      type: 'LOGIN_USER_FAIL',
+      error: 'Invalid username or password'
+    }
   }
 }
 
