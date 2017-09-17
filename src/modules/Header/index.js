@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 
 import './style.css';
 
-export default class Header extends Component {
+class Header extends Component {
+
 	render() {
 		return (
 			<nav className="navbar navbar-inverse" id="myNav">
@@ -20,7 +22,9 @@ export default class Header extends Component {
 
 					<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul className="nav navbar-nav navbar-right">
-							<li><Link to={'/login'}>Login</Link></li>
+							{!this.props.loggedIn &&
+								<li><Link to={'/login'}>Login</Link></li>
+							}
 							<li><Link to={'/register'}>Register</Link></li>
 						</ul>
 					</div>
@@ -30,3 +34,10 @@ export default class Header extends Component {
 	}
 }
 
+const mapStateToProps = (store) => {
+	return {
+		loggedIn: store.user.loggedIn
+	}
+}
+
+export default connect(mapStateToProps)(Header)

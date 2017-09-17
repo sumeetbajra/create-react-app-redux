@@ -5,8 +5,8 @@ import './App.css';
 import Header from './Header';
 import { Footer } from './Footer';
 
-export class App extends Component {
-	
+export default class App extends Component {
+
 	render() {
 		return (
 			<span>
@@ -17,4 +17,3 @@ export class App extends Component {
 		)
 	}
 }
-

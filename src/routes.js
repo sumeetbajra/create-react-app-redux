@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import { App } from './modules/App';
+import App from './modules/App';
 import Homepage from './modules/Home';
 import LoginPage from './modules/Login';
 import RegisterPage from './modules/Register';
