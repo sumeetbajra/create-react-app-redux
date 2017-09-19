@@ -60,7 +60,7 @@ class LoginPage extends Component {
 const mapStateToProps = (store) => {
 	return {
 		loggedIn: store.user.loggedIn,
-		message: store.user.message
+		message: store.user.loginError
 	}
 }
 
