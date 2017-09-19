@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import {registerUser} from '../../actions/userActions';
-
+import { Form, FormGroup, FormControl, Col, ControlLabel, Button } from 'react-bootstrap';
 
 class RegisterPage extends Component {
 
@@ -32,14 +32,52 @@ class RegisterPage extends Component {
 		return (
 			<div className="container">
 				<h3>Register</h3><br />
-				<form>
-					Email: <input name='email' type='email' value={this.state.email} onChange={this.handleChange} /> <br />
-					Phone no.: <input name='phoneNumber' type='text' value={this.state.phoneNumber} onChange={this.handleChange} /> <br />
-					Username: <input name='username' type='text' value={this.state.username} onChange={this.handleChange} /><br />
-					password: <input name='password' type='password' value={this.state.password} onChange={this.handleChange} /><br />
-					<button onClick={this.handleRegister}> Register </button>
 
-				</form>
+				<Form horizontal className="loginForm">
+					<FormGroup controlId="formHorizontalEmail">
+						<Col componentClass={ControlLabel} sm={2} md={2}>
+							Email
+						</Col>
+						<Col sm={10} md={4}>
+							<FormControl name='email' type='email' value={this.state.email} onChange={this.handleChange} placeholder="Email"/>
+						</Col>
+					</FormGroup>
+
+					<FormGroup controlId="formHorizontalPhone">
+						<Col componentClass={ControlLabel} sm={2} md={2}>
+							Phone number
+						</Col>
+						<Col sm={10} md={4}>
+							<FormControl name='phoneNumber' type='text' value={this.state.phoneNumber} onChange={this.handleChange} placeholder="Phone Number"/>
+						</Col>
+					</FormGroup>
+
+					<FormGroup controlId="formHorizontalUsername">
+						<Col componentClass={ControlLabel} sm={2} md={2}>
+							Username
+						</Col>
+						<Col sm={10} md={4}>
+							<FormControl name='username' type='text' value={this.state.username} onChange={this.handleChange} placeholder="Username"/>
+						</Col>
+					</FormGroup>
+
+					<FormGroup controlId="formHorizontalPassword">
+						<Col componentClass={ControlLabel} sm={2} md={2}>
+							Password
+						</Col>
+						<Col sm={10} md={4}>
+							<FormControl type="password" placeholder="Password" name='password' value={this.state.password} onChange={this.handleChange} />
+						</Col>
+					</FormGroup>
+
+					<FormGroup>
+						<Col smOffset={2} sm={10}>
+							<Button type="submit" onClick={this.handleRegister}>
+								Register
+							</Button>
+						</Col>
+					</FormGroup>
+				</Form>
 				<p className="well">This is a sample registration page. You can edit <code>src/modules/Register/index.js</code> to edit this page.</p>
 			</div>
 		);
