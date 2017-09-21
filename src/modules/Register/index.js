@@ -33,7 +33,7 @@ class RegisterPage extends Component {
 			<div className="container">
 				<h3>Register</h3><br />
 
-				<Form horizontal className="loginForm">
+				<Form horizontal>
 					<FormGroup controlId="formHorizontalEmail">
 						<Col componentClass={ControlLabel} sm={2} md={2}>
 							Email
