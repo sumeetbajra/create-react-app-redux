@@ -18,6 +18,7 @@ class Dashboard extends Component {
 			<span>
 				<Header />
         <Switch>
+          <Route exact path="/" component={Homepage} />
           <Route path="/home" component={Homepage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
