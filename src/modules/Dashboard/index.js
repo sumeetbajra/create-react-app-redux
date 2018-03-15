@@ -8,6 +8,8 @@ import { bindActionCreators } from 'redux';
 import Header from '../Header';
 import Footer from '../Footer';
 import Homepage from '../Home';
+import LoginPage from '../Login';
+import RegisterPage from '../Register';
 
 class Dashboard extends Component {
 
@@ -17,6 +19,8 @@ class Dashboard extends Component {
 				<Header />
         <Switch>
           <Route path="/home" component={Homepage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
         </Switch>
 				<Footer />
 			</span>
