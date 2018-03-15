@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
@@ -15,7 +15,7 @@ export default class Header extends Component {
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 						</button>
-						<Link to={'/'} className="navbar-brand">Example</Link>
+						<Link to={'/home'} className="navbar-brand">Example</Link>
 					</div>
 
 					<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -29,4 +29,3 @@ export default class Header extends Component {
 		)
 	}
 }
-
