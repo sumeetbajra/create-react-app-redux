@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
-import Header from './Header';
-import { Footer } from './Footer';
+import Dashboard from '../modules/Dashboard';
+// import Dashboard from '../modules/Dashboard';
 
 export class App extends Component {
-	
+
 	render() {
 		return (
 			<span>
-				<Header />
-				{this.props.children}
-				<Footer />
+				<Switch>
+          <Route component={Dashboard} />
+        </Switch>
 			</span>
 		)
 	}
 }
-

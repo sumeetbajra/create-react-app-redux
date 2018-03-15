@@ -19,11 +19,11 @@ class Homepage extends Component {
 				<p className="App-intro">
 					To get started, edit <code>src/modules/Home/Container/index.js</code> and save to reload.
 				</p>
-				<Counter 
-					count={this.props.count} 
-					incrementAsync={this.props.incrementAsync} 
-					increment={this.props.increment} decrement={this.props.decrement} 
-				/>	
+				<Counter
+					count={this.props.count}
+					incrementAsync={this.props.incrementAsync}
+					increment={this.props.increment} decrement={this.props.decrement}
+				/>
 			</div>
 		)
 	}
