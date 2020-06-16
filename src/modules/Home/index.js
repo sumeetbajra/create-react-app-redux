@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as counterActions from '../../actions/counterActions';
+import {
+	increment,
+	incrementAsync,
+	decrement
+} from '../../reducers/counterReducer';
 import logo from '../logo.svg';
 
 import Counter from './Counter';
 
 class Homepage extends Component {
-
 	render() {
 		return (
 			<div className="App">
@@ -22,7 +25,8 @@ class Homepage extends Component {
 				<Counter
 					count={this.props.count}
 					incrementAsync={this.props.incrementAsync}
-					increment={this.props.increment} decrement={this.props.decrement}
+					increment={this.props.increment}
+					decrement={this.props.decrement}
 				/>
 			</div>
 		)
@@ -30,11 +34,24 @@ class Homepage extends Component {
 }
 
 const mapStateToProps = (store) => {
-	return store.counter;
+	return {
+		count: store.counter.count
+	};
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return bindActionCreators(counterActions, dispatch);
+	return bindActionCreators({
+		increment,
+		incrementAsync,
+		decrement
+	}, dispatch);
+}
+
+Homepage.propTypes = {
+	count						: PropTypes.number.isRequired,
+	increment				: PropTypes.func.isRequired,
+	incrementAsync	: PropTypes.func.isRequired,
+	decrement				: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage)

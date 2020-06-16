@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import Header from '../Header';
@@ -12,7 +10,6 @@ import LoginPage from '../Login';
 import RegisterPage from '../Register';
 
 class Dashboard extends Component {
-
   render() {
     return (
 			<span>
