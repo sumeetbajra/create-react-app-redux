@@ -27,6 +27,7 @@ export default class Header extends Component {
 						<ul className="nav navbar-nav navbar-right">
 							<li><Link to={'/login'}>Login</Link></li>
 							<li><Link to={'/register'}>Register</Link></li>
+							<li><Link to={'/posts'}>API Example</Link></li>
 						</ul>
 					</div>
 				</div>

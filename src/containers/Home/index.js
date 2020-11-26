@@ -20,7 +20,7 @@ class Homepage extends Component {
 					<h2>Welcome to React</h2>
 				</div>
 				<p className="App-intro">
-					To get started, edit <code>src/modules/Home/Container/index.js</code> and save to reload.
+					To get started, edit <code>src/containers/Home/index.js</code> and save to reload.
 				</p>
 				<Counter
 					count={this.props.count}
@@ -54,4 +54,4 @@ Homepage.propTypes = {
 	decrement				: PropTypes.func.isRequired
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Homepage)
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

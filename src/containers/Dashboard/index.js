@@ -6,8 +6,9 @@ import { bindActionCreators } from 'redux';
 import Header from '../Header';
 import Footer from '../Footer';
 import Homepage from '../Home';
-import LoginPage from '../Login';
-import RegisterPage from '../Register';
+import Login from '../Login';
+import Register from '../Register';
+import Posts from '../Posts';
 
 class Dashboard extends Component {
   render() {
@@ -17,8 +18,9 @@ class Dashboard extends Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/home" component={Homepage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/register" component={RegisterPage} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/posts" component={Posts} />
         </Switch>
 				<Footer />
 			</span>

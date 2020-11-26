@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
-import Dashboard from '../modules/Dashboard';
+import Dashboard from './Dashboard';
 // import Dashboard from '../modules/Dashboard';
 
 export class App extends Component {
