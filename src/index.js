@@ -8,10 +8,10 @@ import store from './store';
 import App from './containers/App';
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Router>
-			<App />
-		</Router>
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById('root')
 )

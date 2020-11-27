@@ -7,8 +7,8 @@ import reducer from '../reducers';
 const middleware = applyMiddleware(createMiddleware(), createLogger());
 
 const store = createStore(
-	reducer,
-	middleware
+  reducer,
+  middleware
 );
 
 export default store;

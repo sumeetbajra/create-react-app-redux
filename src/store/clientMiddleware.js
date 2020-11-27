@@ -1,3 +1,5 @@
+// https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/redux/middleware/clientMiddleware.js
+
 export default function clientMiddleware(client) {
   return ({ dispatch, getState }) => next => action => {
     if (typeof action === 'function') {

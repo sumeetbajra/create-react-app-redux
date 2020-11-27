@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'proptypes';
 import BSNModal from 'bootstrap.native/dist/components/modal-native.esm.js'
 
 const Modal = (props) => {
@@ -37,5 +38,12 @@ const Modal = (props) => {
     </div>
   );
 };
+
+Modal.propTypes = {
+  title     : PropTypes.string.isRequired,
+  showModal : PropTypes.bool.isRequired,
+  hideModal : PropTypes.func.isRequired,
+  children  : PropTypes.any.isRequired
+}
 
 export default Modal;
