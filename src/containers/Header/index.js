@@ -25,9 +25,8 @@ export default class Header extends Component {
 					</div>
 					<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul className="nav navbar-nav navbar-right">
-							<li><Link to={'/login'}>Login</Link></li>
-							<li><Link to={'/register'}>Register</Link></li>
 							<li><Link to={'/posts'}>API Example</Link></li>
+							<li><Link to={'/form'}>Formik Example</Link></li>
 						</ul>
 					</div>
 				</div>
