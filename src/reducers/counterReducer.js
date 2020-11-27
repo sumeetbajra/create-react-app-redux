@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export default function counterReducer(state = initialState, action) {
-	switch(action.type) {
+	switch (action.type) {
 		case INCREMENT_COUNTER:
 			return {
 				...state,
@@ -20,13 +20,13 @@ export default function counterReducer(state = initialState, action) {
 			}
 
 		default:
-			return {...state};
+			return { ...state };
 	}
 }
 
 export function incrementAsync() {
 	return (dispatch) => {
-		setTimeout(function() {
+		setTimeout(function () {
 			dispatch({
 				type: INCREMENT_COUNTER
 			})

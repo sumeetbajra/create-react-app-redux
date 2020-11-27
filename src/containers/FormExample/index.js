@@ -34,41 +34,45 @@ const FormExample = () => (
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit} className="form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input
-              className="form-control"
-              type="email"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-            {errors.email && touched.email &&
-              <div className="text-danger text-small">{errors.email}</div>
-            }
-          </div>
-          
-          <div class="form-group">
-            <label for="exampleInputEmail1">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.password}
-            />
-            {errors.password && touched.password &&
-              <div className="text-danger text-small">{errors.password}</div>
-            }
-          </div>
-          <button type="submit" className="btn btn-success" disabled={isSubmitting}>
-            Submit
+          <form onSubmit={handleSubmit} className="form">
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Email address</label>
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+              />
+              {errors.email && touched.email &&
+                <div className="text-danger">
+                  <small>{errors.email}</small>
+                </div>
+              }
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Password</label>
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.password}
+              />
+              {errors.password && touched.password &&
+                <div className="text-danger text-sm">
+                  <small>{errors.password}</small>
+                </div>
+              }
+            </div>
+            <button type="submit" className="btn btn-success" disabled={isSubmitting}>
+              Submit
           </button>
-        </form>
-      )}
+          </form>
+        )}
     </Formik>
   </div>
 );

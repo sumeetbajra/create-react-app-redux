@@ -7,7 +7,7 @@ import postReducer from './postReducer';
 const reducer = combineReducers({
 	counter	: counterReducer,
 	user		: userReducer,
-	post 		: postReducer
+	post		: postReducer
 })
 
 export default reducer;

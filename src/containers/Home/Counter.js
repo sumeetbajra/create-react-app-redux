@@ -11,13 +11,13 @@ export default class Counter extends Component {
 					onClick={this.props.incrementAsync}
 				>
 					Increase (Async)
-				</button>&nbsp; 
+				</button>&nbsp;
 				<button
 					className="btn btn-success"
 					onClick={this.props.increment}
 				>
 					Increase
-				</button>&nbsp; 
+				</button>&nbsp;
 				<button
 					className="btn btn-danger"
 					onClick={this.props.decrement}
@@ -30,7 +30,7 @@ export default class Counter extends Component {
 }
 
 Counter.propTypes = {
-	incrementAsync	: PropTypes.func.isRequired,
-	increment				: PropTypes.func.isRequired,
-	decrement				: PropTypes.func.isRequired
+	incrementAsync: PropTypes.func.isRequired,
+	increment: PropTypes.func.isRequired,
+	decrement: PropTypes.func.isRequired
 }

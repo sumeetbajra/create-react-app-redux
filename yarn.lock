@@ -2697,6 +2697,14 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap.native@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-3.0.14.tgz#05631cdb03aacb4d8229781a8c7cca6329e6dbef"
+  integrity sha512-G/Lwc0flkp1DLe/EB+w4P7sXaTwym0G8pCQr+3WcfN/rMo8Cat+EUn5ChLUX309X/Z67/VnQGO0peX62jRXc1Q==
+  dependencies:
+    minifill "^0.0.8"
+    shorter-js "^0.1.7"
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -7102,6 +7110,11 @@ mini-css-extract-plugin@0.11.3:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
+minifill@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/minifill/-/minifill-0.0.8.tgz#c6ecef302bee672352986d89257b3c18fc7a9ce5"
+  integrity sha512-DOw02Fev6xB40wyie/YJtnIhY0eI+iQ7aBQlSVkOy5OKlFAxob6uG301uvJyMT7F1OeMGfbDexOTabL3uLid1g==
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -9775,6 +9788,11 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
+
+shorter-js@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.1.7.tgz#e02ca55838fa4841553d0fdc49870adde7f5cb19"
+  integrity sha512-H7dO5P4a0LndmaRgTsRTHn3Rf2Oy7ocVf6M1ZvYJIIAtOcEnE7lmhQ7bnDzoU22JbN6KR+VgLzhuuSAhMpoxrQ==
 
 side-channel@^1.0.2, side-channel@^1.0.3:
   version "1.0.3"

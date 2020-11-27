@@ -1,20 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+import Header from './Header';
+import Footer from './Footer';
+import Homepage from './Home';
+import Posts from './Posts';
+import FormExample from './FormExample';
 
 import './App.css';
 
-import Dashboard from './Dashboard';
-// import Dashboard from '../modules/Dashboard';
-
-export class App extends Component {
-
-	render() {
-		return (
-			<span>
+function App() {
+	return (
+		<span>
+			<Header />
+			<div className="page-container container">
 				<Switch>
-          <Route component={Dashboard} />
-        </Switch>
-			</span>
-		)
-	}
+					<Route exact path="/" component={Homepage} />
+					<Route path="/posts" component={Posts} />
+					<Route path="/form" component={FormExample} />
+				</Switch>
+			</div>
+			<Footer />
+		</span>
+	);
 }
+
+export default App;

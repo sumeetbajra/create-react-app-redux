@@ -8,6 +8,7 @@ import {
 	incrementAsync,
 	decrement
 } from '../../reducers/counterReducer';
+
 import logo from '../logo.svg';
 
 import Counter from './Counter';

@@ -30,11 +30,11 @@ class Posts extends Component {
     return (
       <div>
         <h1>Your API data</h1><hr />
-        <table className="table table-responsive table-bordered">
+        <table className="table table-bordered">
           <thead>
             <tr>
-              <td>Id</td>
-              <td>Title</td>
+              <th>Id</th>
+              <th>Title</th>
             </tr>
           </thead>
           <tbody>
@@ -52,19 +52,19 @@ class Posts extends Component {
 }
 
 const mapStateToProps = (store) => {
-	return {
-		data: store.post.data
-	};
+  return {
+    data: store.post.data
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return bindActionCreators({
-		getAllPosts,
-	}, dispatch);
+  return bindActionCreators({
+    getAllPosts,
+  }, dispatch);
 }
 
 Posts.propTypes = {
-	data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);
