@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-export function getAllPosts() {
-  return new Promise((resolve, reject) => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => resolve(response.data))
-      .catch(error => reject(error))
-  });
+export async function getAllPosts() {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    return response.data;
+  } catch(error) {
+    throw error;
+  }
 }
