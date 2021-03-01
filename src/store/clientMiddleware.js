@@ -1,7 +1,7 @@
 // https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/redux/middleware/clientMiddleware.js
 
 export default function clientMiddleware(client) {
-  return ({ dispatch, getState }) => next => action => {
+  return ({ dispatch, getState }) => (next) => (action) => {
     if (typeof action === 'function') {
       return action(dispatch, getState);
     }
@@ -16,9 +16,9 @@ export default function clientMiddleware(client) {
 
     const actionPromise = promise(client, dispatch);
     actionPromise.then(
-      result => next({ ...rest, result, type: SUCCESS }),
-      error => next({ ...rest, error, type: FAILURE })
-    ).catch(error => {
+      (result) => next({ ...rest, result, type: SUCCESS }),
+      (error) => next({ ...rest, error, type: FAILURE })
+    ).catch((error) => {
       next({ ...rest, error, type: FAILURE });
     });
 

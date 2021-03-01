@@ -14,7 +14,7 @@ export default function postReducer(state = initialState, action) {
       return {
         ...state,
         data: action.result
-      }
+      };
 
     default:
       return { ...state };
@@ -25,5 +25,5 @@ export function getAllPosts() {
   return {
     types: [GET_ALL_POSTS, GET_ALL_POSTS_SUCCESS, GET_ALL_POSTS_FAIL],
     promise: Api.getAllPosts
-  }
+  };
 }

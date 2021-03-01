@@ -7,10 +7,14 @@ export default class Footer extends Component {
     return (
       <div className="container" style={{ marginTop: '25px' }}>
         <div className="row">
-          <legend></legend>
-          <p>© Copyright {this.currentYear}. Some site name. All Rights Reserved.</p>
+          <legend />
+          <p>
+            © Copyright&nbsp;
+            {this.currentYear}
+            . Some site name. All Rights Reserved.
+          </p>
         </div>
       </div>
-    )
+    );
   }
 }

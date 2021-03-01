@@ -11,12 +11,12 @@ export default function Header() {
   const toggleModal = (e, show) => {
     e.preventDefault();
     setShowModal(show);
-  }
+  };
 
   return (
-    <React.Fragment>
+    <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link to={'/'} className="navbar-brand">Home</Link>
+        <Link to="/" className="navbar-brand">Home</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,13 +26,13 @@ export default function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item"><Link className="nav-link" to={'/posts'}>API Example</Link></li>
-            <li className="nav-item"><Link className="nav-link" to={'/form'}>Formik Example</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/posts">API Example</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/form">Formik Example</Link></li>
             <li className="nav-item">
               <Link className="nav-link" to="#" onClick={(e) => toggleModal(e, true)}>Open Modal</Link>
             </li>
@@ -46,6 +46,6 @@ export default function Header() {
       >
         This is modal content
       </Modal>
-    </React.Fragment>
-  )
+    </>
+  );
 }

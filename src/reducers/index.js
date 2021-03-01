@@ -8,6 +8,6 @@ const reducer = combineReducers({
   counter	: counterReducer,
   user		: userReducer,
   post		: postReducer
-})
+});
 
 export default reducer;

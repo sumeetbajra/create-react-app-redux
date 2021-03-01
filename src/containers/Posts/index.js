@@ -10,7 +10,7 @@ class Posts extends Component {
     super(props);
     this.state = {
       loading: false
-    }
+    };
   }
 
   async componentDidMount() {
@@ -29,7 +29,8 @@ class Posts extends Component {
 
     return (
       <div>
-        <h1>Your API data</h1><hr />
+        <h1>Your API data</h1>
+        <hr />
         <table className="table table-bordered">
           <thead>
             <tr>
@@ -38,7 +39,7 @@ class Posts extends Component {
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
+            {data.map((item) => (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.title}</td>
@@ -51,20 +52,17 @@ class Posts extends Component {
   }
 }
 
-const mapStateToProps = (store) => {
-  return {
-    data: store.post.data
-  };
-}
+const mapStateToProps = (store) => ({
+  data: store.post.data
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    getAllPosts,
-  }, dispatch);
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getAllPosts,
+}, dispatch);
 
 Posts.propTypes = {
-  data: PropTypes.array.isRequired
-}
+  data: PropTypes.arrayOf(Object).isRequired,
+  getAllPosts: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);

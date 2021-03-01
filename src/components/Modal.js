@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'proptypes';
-import BSNModal from 'bootstrap.native/dist/components/modal-native.esm.js'
+import BSNModal from 'bootstrap.native/dist/components/modal-native.esm';
 
 const Modal = (props) => {
   let modalInstance;
@@ -9,14 +9,14 @@ const Modal = (props) => {
     const modalEl = document.getElementById('react-modal');
     modalInstance = new BSNModal(modalEl);
   });
-  
+
   useEffect(() => {
     if (props.showModal) {
       modalInstance.show();
     } else {
       modalInstance.hide();
     }
-  }, [props.showModal])
+  }, [props.showModal]);
 
   return (
     <div>
@@ -43,7 +43,7 @@ Modal.propTypes = {
   title     : PropTypes.string.isRequired,
   showModal : PropTypes.bool.isRequired,
   hideModal : PropTypes.func.isRequired,
-  children  : PropTypes.any.isRequired
-}
+  children  : PropTypes.node.isRequired
+};
 
 export default Modal;
